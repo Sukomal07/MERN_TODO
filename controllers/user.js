@@ -11,7 +11,7 @@ export const login = async(req, res ,next) =>{
         }
         const isMatch = await bcrypt.compare(password , user.password)
         if(!isMatch){
-            return next (createError(404, "Invalid name or password"))
+            return next (createError(404, "Invalid email or password"))
         }
         sendCookie(user , res , `Welcome back ${user.name}` , 200)
     } catch (error) {
