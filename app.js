@@ -4,8 +4,8 @@ import userRouter from './routes/user.js'
 import taskRouter from './routes/task.js'
 import cookieParser from 'cookie-parser'
 import { errorHandaler } from './middlewares/errorHandaler.js'
-export const app = express()
 import cors from 'cors'
+export const app = express()
 config({
     path: './data/config.env'
 })
